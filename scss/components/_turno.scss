@@ -59,19 +59,10 @@
     background-color: var(--color-acento-tenue);
   }
 
-  .turno:has(:checked) .turno__estado::before {
-    content: "✓ ";
-    font-weight: 700;
-  }
-
   .turno:has(:disabled) {
     border-style: dashed;
     opacity: 0.7;
     cursor: not-allowed;
-  }
-
-  .turno:has(:disabled) .turno__estado::before {
-    content: "⛔ ";
   }
 
   .turno:has(:focus-visible) {
