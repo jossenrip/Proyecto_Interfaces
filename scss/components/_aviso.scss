@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+@layer components {
+  .aviso {
+    padding: var(--espacio-m);
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-acento-tenue);
+  }
+
+  .aviso__titulo {
+    margin-block-start: 0;
+  }
+
+  .aviso__datos {
+    display: grid;
+    gap: var(--espacio-2xs);
+    margin: 0;
+  }
+
+  .aviso__dato {
+    display: grid;
+    gap: var(--espacio-3xs);
+  }
+
+  .aviso__etiqueta {
+    font-weight: 700;
+  }
+
+  .aviso__valor {
+    margin: 0;
+  }
+
+  .aviso__concepto {
+    font-family: var(--fuente-mono);
+    overflow-wrap: anywhere;
+  }
+}
