@@ -86,12 +86,45 @@
     <!-- ===================================================== -->
     <section class="guia__seccion" aria-labelledby="espaciado">
       <h2 id="espaciado">Espaciado</h2>
-      <p>Múltiplos de 4 px. Ningún margen, relleno ni hueco usa un valor fuera de esta escala.</p>
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-3xs)"></span>
+        <code>--espacio-3xs</code> 4 px
+      </div>
 
-      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-2xs)"></span><code>--espacio-2xs</code> 8 px</div>
-      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-s)"></span><code>--espacio-s</code> 16 px</div>
-      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-m)"></span><code>--espacio-m</code> 24 px</div>
-      <!-- TODO Fase 1: completa la escala -->
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-2xs)"></span>
+        <code>--espacio-2xs</code> 8 px
+      </div>
+
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-xs)"></span>
+        <code>--espacio-xs</code> 12 px
+      </div>
+
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-s)"></span>
+        <code>--espacio-s</code> 16 px
+      </div>
+
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-m)"></span>
+        <code>--espacio-m</code> 24 px
+      </div>
+
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-l)"></span>
+        <code>--espacio-l</code> 32 px
+      </div>
+
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-xl)"></span>
+        <code>--espacio-xl</code> 48 px
+      </div>
+
+      <div class="guia__fila">
+        <span class="barra" style="--ancho: var(--espacio-2xl)"></span>
+        <code>--espacio-2xl</code> 64 px
+      </div>
     </section>
 
     <!-- ===================================================== -->
@@ -113,17 +146,17 @@
         <legend>Turnos del jueves 29 de octubre</legend>
         <label class="turno">
           <input class="turno__control" type="radio" name="turno" value="0900">
-          <span class="turno__hora">09:00 – 10:30</span>
+          <span class="turno__hora">09:00 – 10:00</span>
           <span class="turno__estado">Disponible · Pista Central</span>
         </label>
         <label class="turno">
           <input class="turno__control" type="radio" name="turno" value="1030" disabled>
-          <span class="turno__hora">10:30 – 12:00</span>
+          <span class="turno__hora">10:00 – 11:00</span>
           <span class="turno__estado">Ocupado</span>
         </label>
         <label class="turno">
           <input class="turno__control" type="radio" name="turno" value="1800" checked>
-          <span class="turno__hora">18:00 – 19:30</span>
+          <span class="turno__hora">18:00 – 19:00</span>
           <span class="turno__estado">Disponible · Pista Central</span>
         </label>
       </fieldset>
