@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="mapa-padel" name="Mapa de navegación">
+    <mxGraphModel dx="1704" dy="963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" value="PádelComunidad 2.0 · Residencial Los Almendros" vertex="1">
+          <mxGeometry height="40" width="520" x="330" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="navegacion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" value="Cabecera y pie&#xa;Navegación común" vertex="1">
+          <mxGeometry height="70" width="200" x="470" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="turnos" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Turnos&#xa;index.html" vertex="1">
+          <mxGeometry height="70" width="190" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="reserva" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Confirmar reserva&#xa;reserva.html" vertex="1">
+          <mxGeometry height="70" width="190" x="285" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="justificante" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Justificante&#xa;justificante.html" vertex="1">
+          <mxGeometry height="70" width="190" x="690" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="mis-turnos" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Mis turnos&#xa;mis-turnos.html" vertex="1">
+          <mxGeometry height="70" width="190" x="979" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="normas" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="Normas de uso&#xa;normas.html" vertex="1">
+          <mxGeometry height="70" width="190" x="110" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="aviso" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="Aviso legal&#xa;aviso-legal.html" vertex="1">
+          <mxGeometry height="70" width="190" x="475" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="privacidad" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="Privacidad&#xa;privacidad.html" vertex="1">
+          <mxGeometry height="70" width="190" x="860" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="flujo-1" edge="1" parent="1" source="turnos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="reserva" value="Botón Continuar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flujo-2" edge="1" parent="1" source="reserva" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="justificante" value="Botón Confirmar reserva">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flujo-3" edge="1" parent="1" source="justificante" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="mis-turnos" value="Enlace Ver mis turnos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-turnos" edge="1" parent="1" source="navegacion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;" target="turnos" value="Menú · Turnos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-mis-turnos" edge="1" parent="1" source="navegacion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;" target="mis-turnos" value="Menú · Mis turnos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-normas" edge="1" parent="1" source="navegacion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;" target="normas" value="Menú · Normas">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pie-aviso" edge="1" parent="1" source="navegacion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;" target="aviso" value="Pie · Aviso legal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pie-privacidad" edge="1" parent="1" source="navegacion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;" target="privacidad" value="Pie · Privacidad">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda-tarea" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Página de tarea" vertex="1">
+          <mxGeometry height="40" width="150" x="360" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda-lectura" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Página de lectura" vertex="1">
+          <mxGeometry height="40" width="150" x="630" y="660" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa de navegación de PádelComunidad 2.0</title>
+  <desc id="desc">Mapa de las siete páginas de Residencial Los Almendros, con el flujo principal, el menú y los enlaces del pie.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 28px system-ui, sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 16px system-ui, sans-serif; fill: #475569; }
+      .box-title { font: 700 17px system-ui, sans-serif; fill: #0f172a; }
+      .box-file { font: 500 14px ui-monospace, monospace; fill: #334155; }
+      .edge-label { font: 600 13px system-ui, sans-serif; fill: #334155; }
+      .legend { font: 600 14px system-ui, sans-serif; fill: #334155; }
+      .task { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .reading { fill: #dcfce7; stroke: #16a34a; stroke-width: 2; }
+      .common { fill: #f3e8ff; stroke: #9333ea; stroke-width: 2; }
+      .flow { fill: none; stroke: #334155; stroke-width: 2.5; marker-end: url(#arrow); }
+      .nav { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 8 6; marker-end: url(#arrow); }
+      .panel { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="#ffffff"/>
+  <text x="700" y="48" text-anchor="middle" class="title">PádelComunidad · Residencial Los Almendros</text>
+  <text x="700" y="76" text-anchor="middle" class="subtitle">Mapa de navegación · Fase 2</text>
+
+  <!-- Navegación común presente en todas las páginas -->
+  <rect x="555" y="105" width="290" height="78" rx="14" class="common"/>
+  <text x="700" y="136" text-anchor="middle" class="box-title">Cabecera y pie</text>
+  <text x="700" y="161" text-anchor="middle" class="box-file">Navegación común</text>
+
+  <!-- Flujo principal de reserva -->
+  <rect x="55" y="310" width="230" height="88" rx="14" class="task"/>
+  <text x="170" y="345" text-anchor="middle" class="box-title">Turnos</text>
+  <text x="170" y="373" text-anchor="middle" class="box-file">index.html</text>
+
+  <rect x="370" y="310" width="230" height="88" rx="14" class="task"/>
+  <text x="485" y="345" text-anchor="middle" class="box-title">Confirmar reserva</text>
+  <text x="485" y="373" text-anchor="middle" class="box-file">reserva.html</text>
+
+  <rect x="685" y="310" width="230" height="88" rx="14" class="task"/>
+  <text x="800" y="345" text-anchor="middle" class="box-title">Justificante</text>
+  <text x="800" y="373" text-anchor="middle" class="box-file">justificante.html</text>
+
+  <rect x="1000" y="310" width="230" height="88" rx="14" class="task"/>
+  <text x="1115" y="345" text-anchor="middle" class="box-title">Mis turnos</text>
+  <text x="1115" y="373" text-anchor="middle" class="box-file">mis-turnos.html</text>
+
+  <!-- Enlaces del flujo principal -->
+  <path d="M285 354 H370" class="flow"/>
+  <text x="327" y="335" text-anchor="middle" class="edge-label">Continuar</text>
+
+  <path d="M600 354 H685" class="flow"/>
+  <text x="642" y="326" text-anchor="middle" class="edge-label">Confirmar</text>
+  <text x="642" y="343" text-anchor="middle" class="edge-label">reserva</text>
+
+  <path d="M915 354 H1000" class="flow"/>
+  <text x="957" y="326" text-anchor="middle" class="edge-label">Ver mis</text>
+  <text x="957" y="343" text-anchor="middle" class="edge-label">turnos</text>
+
+  <!-- Páginas de lectura -->
+  <rect x="235" y="635" width="230" height="88" rx="14" class="reading"/>
+  <text x="350" y="670" text-anchor="middle" class="box-title">Normas de uso</text>
+  <text x="350" y="698" text-anchor="middle" class="box-file">normas.html</text>
+
+  <rect x="585" y="635" width="230" height="88" rx="14" class="reading"/>
+  <text x="700" y="670" text-anchor="middle" class="box-title">Aviso legal</text>
+  <text x="700" y="698" text-anchor="middle" class="box-file">aviso-legal.html</text>
+
+  <rect x="935" y="635" width="230" height="88" rx="14" class="reading"/>
+  <text x="1050" y="670" text-anchor="middle" class="box-title">Privacidad</text>
+  <text x="1050" y="698" text-anchor="middle" class="box-file">privacidad.html</text>
+
+  <!-- Menú de cabecera: Turnos, Mis turnos y Normas -->
+  <path d="M610 183 C500 220 290 220 170 310" class="nav"/>
+  <text x="365" y="220" class="edge-label">Menú · Turnos</text>
+
+  <path d="M790 183 C920 215 1080 225 1115 310" class="nav"/>
+  <text x="990" y="220" class="edge-label">Menú · Mis turnos</text>
+
+  <path d="M620 183 C470 290 390 480 350 635" class="nav"/>
+  <text x="395" y="485" class="edge-label">Menú y pie · Normas</text>
+
+  <!-- Pie legal: Aviso legal y Privacidad -->
+  <path d="M700 183 V635" class="nav"/>
+  <text x="712" y="520" class="edge-label">Pie · Aviso legal</text>
+
+  <path d="M780 183 C950 300 1040 470 1050 635" class="nav"/>
+  <text x="1000" y="485" class="edge-label">Pie · Privacidad</text>
+
+  <!-- Leyenda -->
+  <rect x="430" y="805" width="540" height="60" rx="12" class="panel"/>
+  <rect x="465" y="824" width="28" height="22" rx="5" class="task"/>
+  <text x="505" y="841" class="legend">Página de tarea</text>
+  <rect x="665" y="824" width="28" height="22" rx="5" class="reading"/>
+  <text x="705" y="841" class="legend">Página de lectura</text>
+  <line x1="855" y1="835" x2="910" y2="835" class="nav"/>
+  <text x="925" y="841" class="legend">Navegación común</text>
+</svg>
