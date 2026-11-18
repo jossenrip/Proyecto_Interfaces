@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+@layer components {
+  /* Representa un bloque provisional dentro del wireframe. */
+
+  .hueco {
+    display: grid;
+    min-block-size: 8rem;
+    max-inline-size: none;
+    place-items: center;
+    padding: var(--espacio-m);
+    border: 2px dashed var(--color-borde-control);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-superficie);
+    color: var(--color-texto-suave);
+    text-align: center;
+  }
+}

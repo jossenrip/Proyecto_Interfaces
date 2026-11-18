@@ -4,33 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Título: se sustituirá al crear cada página real. -->
+  <!-- Título provisional que se sustituirá en cada página de lectura. -->
   <title>[Nombre de la página] · Pádel Residencial Los Almendros</title>
 
-  <!-- Hoja de estilos compilada desde los archivos SCSS. -->
+  <!-- Hoja de estilos generada a partir de los archivos SCSS. -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-  <!-- Permite saltar el menú y llegar directamente al contenido. -->
+  <!-- Permite llegar directamente al contenido usando el teclado. -->
   <a class="salto" href="#contenido">Saltar al contenido</a>
 
-  <!-- Cabecera común para las siete páginas del portal. -->
+  <!-- Cabecera común para todas las páginas del portal. -->
   <header class="cabecera">
     <div class="cabecera__interior contenedor">
-      <!-- La marca enlaza siempre con la página principal. -->
+      <!-- La marca enlaza con la página principal de turnos. -->
       <a class="cabecera__marca" href="index.html">
         Pádel Residencial Los Almendros
       </a>
 
-      <!-- Navegación principal del portal. -->
+      <!-- Navegación principal común del portal. -->
       <nav class="menu" aria-label="Principal">
         <ul class="menu__lista">
           <li>
             <a class="menu__enlace" href="index.html">Turnos</a>
           </li>
           <li>
-            <a class="menu__enlace" href="mis-turnos.html">Mis turnos</a>
+            <a class="menu__enlace" href="mis-turnos.html">
+              Mis turnos
+            </a>
           </li>
           <li>
             <a class="menu__enlace" href="normas.html">Normas</a>
@@ -40,29 +42,49 @@
     </div>
   </header>
 
-  <!-- Contenido específico que cambia en cada página de tarea. -->
-  <main id="contenido" class="contenedor">
+  <!-- Contenido de lectura, como normas o información legal. -->
+  <main id="contenido" class="lectura contenedor">
     <h1>[Nombre de la página]</h1>
 
-    <!-- Huecos provisionales que se sustituirán por contenido real. -->
-    <p class="hueco">[Bloque principal: formulario o listado]</p>
-    <p class="hueco">[Acción principal: botón]</p>
+    <!-- Introducción provisional de la página. -->
+    <p>
+      [Introducción al contenido de la página de lectura]
+    </p>
+
+    <!-- Primer bloque provisional de información. -->
+    <section class="lectura__seccion">
+      <h2>[Título de la primera sección]</h2>
+
+      <p>
+        [Contenido de la primera sección]
+      </p>
+    </section>
+
+    <!-- Segundo bloque provisional de información. -->
+    <section class="lectura__seccion">
+      <h2>[Título de la segunda sección]</h2>
+
+      <p>
+        [Contenido de la segunda sección]
+      </p>
+    </section>
   </main>
 
   <!-- Pie común con los datos LSSI ficticios del Caso 07. -->
   <footer class="pie">
     <div class="pie__interior contenedor">
-      <!-- Datos de contacto del titular ficticio del portal. -->
+      <!-- Datos del titular ficticio del portal. -->
       <address class="pie__datos">
         Comunidad de Propietarios Residencial Los Almendros ·
         CIF H-00000007<br>
-        Paseo de Los Almendros, 4 · 00000 Localidad Ficticia<br>
+        Paseo de Los Almendros, 4 ·
+        00000 Localidad Ficticia<br>
         <a href="mailto:administracion@losalmendros.example">
           administracion@losalmendros.example
         </a>
       </address>
 
-      <!-- Navegación legal común para las siete páginas. -->
+      <!-- Navegación legal común de las siete páginas. -->
       <nav aria-label="Legal">
         <ul class="pie__enlaces">
           <li>
@@ -77,7 +99,7 @@
         </ul>
       </nav>
 
-      <!-- Indica que la comunidad y sus datos son ficticios. -->
+      <!-- Identifica los datos como parte de un proyecto académico. -->
       <p class="pie__nota">
         <small>
           Proyecto académico ficticio · DIW 0615 · 2.º DAW

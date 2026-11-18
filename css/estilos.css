@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @layer reset, tokens, base, layout, components, utilities;
 @layer tokens {
   :root {
@@ -415,6 +416,126 @@
   .aviso__concepto {
     font-family: var(--fuente-mono);
     overflow-wrap: anywhere;
+  }
+}
+@layer components {
+  /* Enlace que permite saltar directamente al contenido principal. */
+  .salto {
+    position: absolute;
+    inset-block-start: var(--espacio-2xs);
+    inset-inline-start: var(--espacio-2xs);
+    z-index: 1;
+    padding: var(--espacio-xs);
+    border-radius: var(--radio-control);
+    background-color: var(--color-acento);
+    color: var(--color-sobre-acento);
+    font-weight: 700;
+    transform: translateY(-200%);
+  }
+  /* Hace visible el enlace de salto al recibir foco. */
+  .salto:focus-visible {
+    transform: translateY(0);
+  }
+  /* Cabecera común de las páginas del portal. */
+  .cabecera {
+    border-block-end: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+  }
+  /* Organiza la marca y la navegación principal. */
+  .cabecera__interior {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-s);
+    padding-block: var(--espacio-s);
+  }
+  /* Enlace que muestra el nombre de la comunidad. */
+  .cabecera__marca {
+    color: var(--color-texto);
+    font-size: var(--paso-1);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  /* Elimina las viñetas y organiza los enlaces del menú. */
+  .menu__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-xs);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  /* Define el área táctil de cada enlace del menú. */
+  .menu__enlace {
+    min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    padding-inline: var(--espacio-xs);
+    border-radius: var(--radio-control);
+    text-decoration: none;
+  }
+  /* Destaca el enlace sobre el que se sitúa el puntero. */
+  .menu__enlace:hover {
+    background-color: var(--color-acento-tenue);
+  }
+}
+@layer components {
+  /* Pie común con los datos legales ficticios. */
+  .pie {
+    margin-block-start: var(--espacio-xl);
+    border-block-start: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+  }
+  /* Organiza los bloques internos del pie. */
+  .pie__interior {
+    display: grid;
+    gap: var(--espacio-m);
+    padding-block: var(--espacio-l);
+  }
+  /* Presenta los datos de contacto sin cursiva. */
+  .pie__datos {
+    color: var(--color-texto-suave);
+    font-style: normal;
+    line-height: var(--interlineado-texto);
+  }
+  /* Organiza los enlaces legales sin viñetas. */
+  .pie__enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-s);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  /* Identifica la web como proyecto académico ficticio. */
+  .pie__nota {
+    margin: 0;
+  }
+}
+@layer components {
+  /* Representa un bloque provisional dentro del wireframe. */
+  .hueco {
+    display: grid;
+    min-block-size: 8rem;
+    max-inline-size: none;
+    place-items: center;
+    padding: var(--espacio-m);
+    border: 2px dashed var(--color-borde-control);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-superficie);
+    color: var(--color-texto-suave);
+    text-align: center;
+  }
+}
+@layer components {
+  /* Limita la anchura para facilitar la lectura de textos largos. */
+  .lectura {
+    max-inline-size: 75ch;
+    padding-block: var(--espacio-l);
+  }
+  /* Separa visualmente las secciones del contenido. */
+  .lectura__seccion {
+    margin-block-start: var(--espacio-xl);
   }
 }
 @layer utilities {

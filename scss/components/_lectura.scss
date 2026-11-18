@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+@layer components {
+  /* Limita la anchura para facilitar la lectura de textos largos. */
+
+  .lectura {
+    max-inline-size: 75ch;
+    padding-block: var(--espacio-l);
+  }
+
+  /* Separa visualmente las secciones del contenido. */
+
+  .lectura__seccion {
+    margin-block-start: var(--espacio-xl);
+  }
+}
