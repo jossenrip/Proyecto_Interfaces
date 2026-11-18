@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título único que identifica la página en el navegador. -->
+  <title>Turnos · Pádel Residencial Los Almendros</title>
+
+  <!-- Hoja de estilos generada desde los archivos SCSS. -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Permite saltar directamente al contenido usando el teclado. -->
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Cabecera común del portal. -->
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <!-- La marca enlaza con la página principal. -->
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial Los Almendros
+      </a>
+
+      <!-- Navegación principal presente en todas las páginas. -->
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a
+              class="menu__enlace"
+              href="index.html"
+              aria-current="page"
+            >
+              Turnos
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="mis-turnos.html">
+              Mis turnos
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="normas.html">
+              Normas
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Página para seleccionar la fecha, la pista y el turno. -->
+  <main id="contenido" class="turnos contenedor">
+    <h1>Reservar un turno</h1>
+
+    <p>
+      Selecciona una fecha, una pista y un turno disponible.
+      Cada reserva tiene una duración de 60 minutos.
+    </p>
+
+    <!-- Envía la selección a la página de confirmación. -->
+    <form
+      class="turnos__formulario"
+      action="reserva.html"
+      method="get"
+    >
+      <!-- Campo para seleccionar el día de la reserva. -->
+      <fieldset class="turnos__grupo">
+        <legend>Fecha de la reserva</legend>
+
+        <label for="fecha">Selecciona una fecha</label>
+
+        <input
+          id="fecha"
+          name="fecha"
+          type="date"
+          required
+        >
+      </fieldset>
+
+      <!-- Radios para elegir una de las dos pistas del residencial. -->
+      <fieldset class="turnos__grupo">
+        <legend>Selecciona una pista</legend>
+
+        <label>
+          <input
+            type="radio"
+            name="pista"
+            value="central"
+            checked
+          >
+          Pista Central
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="pista"
+            value="norte"
+          >
+          Pista Norte
+        </label>
+      </fieldset>
+
+      <!-- Tarjetas de turno reutilizadas desde la Fase 1. -->
+      <fieldset class="turnos__grupo">
+        <legend>Selecciona un turno</legend>
+
+        <!-- Turno disponible. -->
+        <label class="turno">
+          <input
+            class="turno__control"
+            type="radio"
+            name="turno"
+            value="0800"
+            required
+          >
+
+          <span class="turno__hora">
+            08:00 – 09:00
+          </span>
+
+          <span class="turno__estado">
+            Disponible · Pista Central
+          </span>
+        </label>
+
+        <!-- Turno ocupado y no seleccionable. -->
+        <label class="turno">
+          <input
+            class="turno__control"
+            type="radio"
+            name="turno"
+            value="0900"
+            disabled
+          >
+
+          <span class="turno__hora">
+            09:00 – 10:00
+          </span>
+
+          <span class="turno__estado">
+            Ocupado
+          </span>
+        </label>
+
+        <!-- Segundo turno disponible. -->
+        <label class="turno">
+          <input
+            class="turno__control"
+            type="radio"
+            name="turno"
+            value="1000"
+          >
+
+          <span class="turno__hora">
+            10:00 – 11:00
+          </span>
+
+          <span class="turno__estado">
+            Disponible · Pista Central
+          </span>
+        </label>
+
+        <!-- Tercer turno disponible. -->
+        <label class="turno">
+          <input
+            class="turno__control"
+            type="radio"
+            name="turno"
+            value="1800"
+          >
+
+          <span class="turno__hora">
+            18:00 – 19:00
+          </span>
+
+          <span class="turno__estado">
+            Disponible · Pista Central
+          </span>
+        </label>
+      </fieldset>
+
+      <!-- Continúa con los datos de la reserva seleccionada. -->
+      <button class="boton boton--bloque" type="submit">
+        Continuar
+      </button>
+    </form>
+  </main>
+
+  <!-- Pie común con los datos LSSI ficticios del Caso 07. -->
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <!-- Datos del titular ficticio del portal. -->
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial Los Almendros ·
+        CIF H-00000007<br>
+        Paseo de Los Almendros, 4 ·
+        00000 Localidad Ficticia<br>
+
+        <a href="mailto:administracion@losalmendros.example">
+          administracion@losalmendros.example
+        </a>
+      </address>
+
+      <!-- Navegación legal común del portal. -->
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li>
+            <a href="aviso-legal.html">Aviso legal</a>
+          </li>
+          <li>
+            <a href="privacidad.html">Privacidad</a>
+          </li>
+          <li>
+            <a href="normas.html">Normas de uso</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Indica que todos los datos utilizados son ficticios. -->
+      <p class="pie__nota">
+        <small>
+          Proyecto académico ficticio · DIW 0615 · 2.º DAW
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
