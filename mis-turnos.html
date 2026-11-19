@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título único de la página de reservas propias. -->
+  <title>Mis turnos · Pádel Residencial Los Almendros</title>
+
+  <!-- Hoja de estilos compilada desde los archivos SCSS. -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Permite acceder directamente al contenido con el teclado. -->
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Cabecera común del portal. -->
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <!-- La marca enlaza con la página principal. -->
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial Los Almendros
+      </a>
+
+      <!-- Navegación principal común. -->
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a class="menu__enlace" href="index.html">
+              Turnos
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="menu__enlace"
+              href="mis-turnos.html"
+              aria-current="page"
+            >
+              Mis turnos
+            </a>
+          </li>
+
+          <li>
+            <a class="menu__enlace" href="normas.html">
+              Normas
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Listado de reservas asociadas a la vivienda del usuario. -->
+  <main id="contenido" class="mis-turnos contenedor">
+    <h1>Mis turnos</h1>
+
+    <p>
+      Reservas asociadas a la vivienda 5.º C.
+    </p>
+    <br>
+    <!-- Primera reserva activa del usuario. -->
+    <article class="reserva-propia">
+      <header class="reserva-propia__cabecera">
+        <h2 class="reserva-propia__titulo">
+          Pista Central
+        </h2>
+
+        <p class="reserva-propia__estado">
+          Reserva confirmada
+        </p>
+      </header>
+
+      <!-- Datos principales de la reserva. -->
+      <dl class="reserva-propia__datos">
+        <div>
+          <dt>Fecha</dt>
+          <dd>29 de octubre de 2026</dd>
+        </div>
+
+        <div>
+          <dt>Horario</dt>
+          <dd>08:00 – 09:00</dd>
+        </div>
+
+        <div>
+          <dt>Número de reserva</dt>
+          <dd>ALM-2026-0047</dd>
+        </div>
+
+        <div>
+          <dt>Pago</dt>
+          <dd>Pendiente de comprobación</dd>
+        </div>
+      </dl>
+
+      <!-- Acciones disponibles para esta reserva. -->
+      <div class="reserva-propia__acciones">
+        <a class="boton" href="justificante.html">
+          Ver justificante
+        </a>
+
+        <button
+          class="boton boton--secundario"
+          type="button"
+        >
+          Cancelar reserva
+        </button>
+      </div>
+    </article>
+    <br>
+    <!-- Segunda reserva para mostrar un estado diferente. -->
+    <article class="reserva-propia">
+      <header class="reserva-propia__cabecera">
+        <h2 class="reserva-propia__titulo">
+          Pista Norte
+        </h2>
+
+        <p class="reserva-propia__estado">
+          Pago confirmado
+        </p>
+      </header>
+
+      <!-- Datos principales de la segunda reserva. -->
+      <dl class="reserva-propia__datos">
+        <div>
+          <dt>Fecha</dt>
+          <dd>3 de noviembre de 2026</dd>
+        </div>
+
+        <div>
+          <dt>Horario</dt>
+          <dd>18:00 – 19:00</dd>
+        </div>
+
+        <div>
+          <dt>Número de reserva</dt>
+          <dd>ALM-2026-0052</dd>
+        </div>
+
+        <div>
+          <dt>Pago</dt>
+          <dd>Confirmado</dd>
+        </div>
+      </dl>
+
+      <!-- Acciones disponibles para la segunda reserva. -->
+      <div class="reserva-propia__acciones">
+        <a class="boton" href="justificante.html">
+          Ver justificante
+        </a>
+
+        <button
+          class="boton boton--secundario"
+          type="button"
+        >
+          Cancelar reserva
+        </button>
+      </div>
+    </article>
+    <br>
+    <!-- Enlace para iniciar una reserva nueva. -->
+    <a class="boton boton--bloque" href="index.html">
+      Reservar otro turno
+    </a>
+  </main>
+
+  <!-- Pie común con los datos LSSI ficticios del Caso 07. -->
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <!-- Datos del titular ficticio del portal. -->
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial Los Almendros ·
+        CIF H-00000007<br>
+        Paseo de Los Almendros, 4 ·
+        00000<br>
+
+        <a href="mailto:administracion@losalmendros.example">
+          administracion@losalmendros.example
+        </a>
+      </address>
+
+      <!-- Navegación legal común del portal. -->
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li>
+            <a href="aviso-legal.html">Aviso legal</a>
+          </li>
+
+          <li>
+            <a href="privacidad.html">Privacidad</a>
+          </li>
+
+          <li>
+            <a href="normas.html">Normas de uso</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Identifica la web como proyecto académico ficticio. -->
+      <p class="pie__nota">
+        <small>
+          DIW · 2.º DAW
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

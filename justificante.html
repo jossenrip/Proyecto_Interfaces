@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título único de la página del justificante. -->
+  <title>Justificante · Pádel Residencial Los Almendros</title>
+
+  <!-- Hoja de estilos compilada desde los archivos SCSS. -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Permite acceder directamente al contenido con el teclado. -->
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Cabecera común del portal. -->
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <!-- La marca enlaza con la página principal. -->
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial Los Almendros
+      </a>
+
+      <!-- Navegación principal común. -->
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a class="menu__enlace" href="index.html">
+              Turnos
+            </a>
+          </li>
+
+          <li>
+            <a class="menu__enlace" href="mis-turnos.html">
+              Mis turnos
+            </a>
+          </li>
+
+          <li>
+            <a class="menu__enlace" href="normas.html">
+              Normas
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Justificante con los datos principales de la reserva. -->
+  <main id="contenido" class="justificante contenedor">
+    <h1>Reserva confirmada</h1>
+
+    <p>
+      Guarda este justificante. Necesitarás el PIN para acceder
+      a la pista durante el turno reservado.
+    </p>
+
+    <!-- Identificación de la reserva realizada. -->
+    <section
+      class="justificante__bloque"
+      aria-labelledby="titulo-identificacion"
+    >
+      <h2 id="titulo-identificacion">
+        Identificación
+      </h2>
+
+      <dl class="justificante__datos">
+        <div>
+          <dt>Número de reserva</dt>
+          <dd>ALM-2026-0047</dd>
+        </div>
+
+        <div>
+          <dt>PIN de acceso</dt>
+          <dd><strong>5831</strong></dd>
+        </div>
+
+        <div>
+          <dt>Vivienda</dt>
+          <dd>5.º C</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Resumen del turno asociado a la reserva. -->
+    <section
+      class="justificante__bloque"
+      aria-labelledby="titulo-turno"
+    >
+      <h2 id="titulo-turno">
+        Datos del turno
+      </h2>
+
+      <dl class="justificante__datos">
+        <div>
+          <dt>Pista</dt>
+          <dd>Central</dd>
+        </div>
+
+        <div>
+          <dt>Fecha</dt>
+          <dd>29 de octubre de 2026</dd>
+        </div>
+
+        <div>
+          <dt>Horario</dt>
+          <dd>08:00 – 09:00</dd>
+        </div>
+
+        <div>
+          <dt>Duración</dt>
+          <dd>60 minutos</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Estado del pago correspondiente a los invitados. -->
+    <section
+      class="justificante__bloque"
+      aria-labelledby="titulo-pago"
+    >
+      <h2 id="titulo-pago">
+        Estado del pago
+      </h2>
+
+      <p>
+        <strong>Pendiente de comprobación</strong>
+      </p>
+
+      <dl class="justificante__datos">
+        <div>
+          <dt>Invitados no residentes</dt>
+          <dd>1</dd>
+        </div>
+
+        <div>
+          <dt>Importe</dt>
+          <dd>1,50 €</dd>
+        </div>
+
+        <div>
+          <dt>Forma de pago</dt>
+          <dd>Bizum al 600 000 000</dd>
+        </div>
+
+        <div>
+          <dt>Concepto</dt>
+          <dd>RESERVA PADEL ALMENDROS 5C</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Acciones disponibles después de confirmar la reserva. -->
+    <div class="justificante__acciones">
+      <a class="boton" href="mis-turnos.html">
+        Ver mis turnos
+      </a>
+
+      <a class="boton boton--secundario" href="index.html">
+        Reservar otro turno
+      </a>
+    </div>
+  </main>
+
+  <!-- Pie común con los datos LSSI ficticios del Caso 07. -->
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <!-- Datos del titular ficticio del portal. -->
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial Los Almendros ·
+        CIF H-00000007<br>
+        Paseo de Los Almendros, 4 ·
+        00000 Localidad Ficticia<br>
+
+        <a href="mailto:administracion@losalmendros.example">
+          administracion@losalmendros.example
+        </a>
+      </address>
+
+      <!-- Navegación legal común del portal. -->
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li>
+            <a href="aviso-legal.html">Aviso legal</a>
+          </li>
+
+          <li>
+            <a href="privacidad.html">Privacidad</a>
+          </li>
+
+          <li>
+            <a href="normas.html">Normas de uso</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Indica que los datos del portal son ficticios. -->
+      <p class="pie__nota">
+        <small>
+          Proyecto académico ficticio · DIW 0615 · 2.º DAW
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

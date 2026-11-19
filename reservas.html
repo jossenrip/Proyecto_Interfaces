@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título único de la página de confirmación. -->
+  <title>Confirmar reserva · Pádel Residencial Los Almendros</title>
+
+  <!-- Hoja de estilos compilada desde los archivos SCSS. -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Permite saltar directamente al contenido con el teclado. -->
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Cabecera común del portal. -->
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <!-- La marca permite volver a la página principal. -->
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial Los Almendros
+      </a>
+
+      <!-- Navegación principal presente en todas las páginas. -->
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a class="menu__enlace" href="index.html">
+              Turnos
+            </a>
+          </li>
+
+          <li>
+            <a class="menu__enlace" href="mis-turnos.html">
+              Mis turnos
+            </a>
+          </li>
+
+          <li>
+            <a class="menu__enlace" href="normas.html">
+              Normas
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Formulario para completar y confirmar la reserva. -->
+  <main id="contenido" class="reserva contenedor">
+    <h1>Confirmar reserva</h1>
+
+    <p>
+      Revisa el turno seleccionado e indica quién participará
+      en la reserva.
+    </p>
+
+    <!-- El formulario continúa hacia el justificante. -->
+    <form
+      class="reserva__formulario"
+      action="justificante.html"
+      method="get"
+    >
+      <!-- Datos del residente que realiza la reserva. -->
+      <fieldset class="reserva__grupo">
+        <legend>Datos del residente</legend>
+
+        <label for="nombre">
+          Nombre y apellidos
+        </label>
+
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          autocomplete="name"
+          required
+        >
+
+        <label for="vivienda">
+          Vivienda
+        </label>
+
+        <input
+          id="vivienda"
+          name="vivienda"
+          type="text"
+          value="5.º C"
+          readonly
+        >
+      </fieldset>
+
+      <!-- Datos del resto de jugadores de la reserva. -->
+      <fieldset class="reserva__grupo">
+        <legend>Jugadores</legend>
+
+        <label for="jugador-dos">
+          Segundo jugador
+        </label>
+
+        <input
+          id="jugador-dos"
+          name="jugador-dos"
+          type="text"
+          required
+        >
+
+        <label for="jugador-tres">
+          Tercer jugador
+        </label>
+
+        <input
+          id="jugador-tres"
+          name="jugador-tres"
+          type="text"
+        >
+
+        <label for="jugador-cuatro">
+          Cuarto jugador
+        </label>
+
+        <input
+          id="jugador-cuatro"
+          name="jugador-cuatro"
+          type="text"
+        >
+      </fieldset>
+
+      <!-- Selector reutilizado para indicar los invitados no residentes. -->
+      <fieldset class="invitados">
+        <legend>
+          ¿Cuántos invitados no residentes participarán?
+        </legend>
+
+        <!-- La opción inicial indica que no hay invitados. -->
+        <label class="invitados__opcion">
+          <input
+            class="invitados__control"
+            type="radio"
+            name="invitados"
+            value="0"
+            checked
+          >
+          0
+        </label>
+
+        <label class="invitados__opcion">
+          <input
+            class="invitados__control"
+            type="radio"
+            name="invitados"
+            value="1"
+          >
+          1
+        </label>
+
+        <label class="invitados__opcion">
+          <input
+            class="invitados__control"
+            type="radio"
+            name="invitados"
+            value="2"
+          >
+          2
+        </label>
+
+        <label class="invitados__opcion">
+          <input
+            class="invitados__control"
+            type="radio"
+            name="invitados"
+            value="3"
+          >
+          3
+        </label>
+      </fieldset>
+
+      <!-- Informa del pago exigido cuando participan invitados. -->
+      <section class="aviso" aria-labelledby="titulo-pago">
+        <h2 class="aviso__titulo" id="titulo-pago">
+          Pago por Bizum
+        </h2>
+
+        <p>
+          La tarifa es de 1,50 € por cada invitado no residente.
+        </p>
+
+        <dl class="aviso__datos">
+          <div class="aviso__dato">
+            <dt class="aviso__etiqueta">Teléfono</dt>
+
+            <dd class="aviso__valor">
+              600 000 000
+            </dd>
+          </div>
+
+          <div class="aviso__dato">
+            <dt class="aviso__etiqueta">Concepto</dt>
+
+            <dd class="aviso__valor aviso__concepto">
+              RESERVA PADEL ALMENDROS 5C
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Resumen provisional del turno elegido en la página anterior. -->
+      <section
+        class="reserva__resumen"
+        aria-labelledby="titulo-resumen"
+      >
+        <h2 id="titulo-resumen">
+          Resumen de la reserva
+        </h2>
+
+        <dl>
+          <div>
+            <dt>Pista</dt>
+            <dd>Central</dd>
+          </div>
+
+          <div>
+            <dt>Duración</dt>
+            <dd>60 minutos</dd>
+          </div>
+
+          <div>
+            <dt>Horario</dt>
+            <dd>08:00 – 09:00</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Envía el formulario hacia la página del justificante. -->
+      <button class="boton boton--bloque" type="submit">
+        Confirmar reserva
+      </button>
+
+      <!-- Permite volver a la selección de turno. -->
+      <a class="boton boton--secundario" href="index.html">
+        Volver a los turnos
+      </a>
+    </form>
+  </main>
+
+  <!-- Pie común con los datos LSSI ficticios del Caso 07. -->
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <!-- Datos del titular ficticio del portal. -->
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial Los Almendros ·
+        CIF H-00000007<br>
+        Paseo de Los Almendros, 4 ·
+        00000 Localidad Ficticia<br>
+
+        <a href="mailto:administracion@losalmendros.example">
+          administracion@losalmendros.example
+        </a>
+      </address>
+
+      <!-- Navegación legal común del portal. -->
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li>
+            <a href="aviso-legal.html">Aviso legal</a>
+          </li>
+
+          <li>
+            <a href="privacidad.html">Privacidad</a>
+          </li>
+
+          <li>
+            <a href="normas.html">Normas de uso</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Identifica la web como proyecto académico ficticio. -->
+      <p class="pie__nota">
+        <small>
+          Proyecto académico ficticio · DIW 0615 · 2.º DAW
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
