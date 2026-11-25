@@ -118,4 +118,10 @@
     border-radius: var(--radio-control);
     padding-inline: var(--espacio-xs);
   }
+
+  textarea {
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    padding-inline: var(--espacio-xs);
+  }
 }

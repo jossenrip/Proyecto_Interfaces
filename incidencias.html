@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título único que identifica la página en el navegador. -->
+  <title>Incidencias · Pádel Residencial Los Almendros</title>
+
+  <!-- Hoja de estilos generada desde los archivos SCSS. -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- Permite saltar directamente al contenido usando el teclado. -->
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <!-- Cabecera común del portal. -->
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <!-- La marca enlaza con la página principal. -->
+      <a class="cabecera__marca" href="index.html">
+        Pádel Residencial Los Almendros
+      </a>
+
+      <!-- Navegación principal presente en todas las páginas. -->
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li>
+            <a
+              class="menu__enlace"
+              href="index.html"
+              aria-current="page"
+            >
+              Turnos
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="mis-turnos.html">
+              Mis turnos
+            </a>
+          </li>
+          <li>
+            <a class="menu__enlace" href="normas.html">
+              Normas
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Página para seleccionar la fecha, la pista y el turno. -->
+  <main id="contenido" class="turnos contenedor">
+    <h1>Comunicar una incidencia</h1><br>
+    <form action="incidencias.html">
+      <fieldset>
+        <legend>Tipo de incidencia</legend>
+
+        <label><input type="radio">Estado de la pista</label>
+        <label><input type="radio">Iluminación o acceso</label>
+        <label><input type="radio">Reserva o pago</label>
+        <label><input type="radio">Queja de convivencia</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pista afectada</legend>
+        <input type="text" placeholder="Introcucir pista">
+      </fieldset>
+      <fieldset>
+        <legend>Fecha</legend>
+        <input type="date">
+      </fieldset>
+      <fieldset>
+        <legend>Fecha</legend>
+        <input type="date">
+      </fieldset>
+      <fieldset>
+        <legend>Descripción</legend>
+        <textarea></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Correo para respuesta</legend>
+        <input type="email" required>
+      </fieldset>
+      <fieldset>
+        <legend>Privacidad</legend>
+        <input type="checkbox" required>
+      </fieldset><br>
+      <button type="submit">Enviar</button>
+    </form>
+
+  </main>
+
+  <!-- Pie común con los datos LSSI ficticios del Caso 07. -->
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <!-- Datos del titular ficticio del portal. -->
+      <address class="pie__datos">
+        Comunidad de Propietarios Residencial Los Almendros ·
+        CIF H-00000007<br>
+        Paseo de Los Almendros, 4 ·
+        00000 Localidad Ficticia<br>
+
+        <a href="mailto:administracion@losalmendros.example">
+          administracion@losalmendros.example
+        </a>
+      </address>
+
+      <!-- Navegación legal común del portal. -->
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li>
+            <a href="aviso-legal.html">Aviso legal</a>
+          </li>
+          <li>
+            <a href="privacidad.html">Privacidad</a>
+          </li>
+          <li>
+            <a href="normas.html">Normas de uso</a>
+          </li>
+          <li>
+            <a href="incidencias.html">Incidencias</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Indica que todos los datos utilizados son ficticios. -->
+      <p class="pie__nota">
+        <small>
+          Proyecto académico ficticio · DIW 0615 · 2.º DAW
+        </small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
